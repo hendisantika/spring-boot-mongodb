@@ -1,4 +1,4 @@
-package com.dineshonjava.sbmdb;
+package com.hendisantika.sbmdb;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

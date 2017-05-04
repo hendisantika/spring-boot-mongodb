@@ -1,7 +1,7 @@
 /**
  * 
  */
-package com.dineshonjava.sbmdb.models;
+package com.hendisantika.sbmdb.models;
 
 import java.util.Date;
 

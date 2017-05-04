@@ -1,7 +1,7 @@
 /**
  * 
  */
-package com.dineshonjava.sbmdb.controller;
+package com.hendisantika.sbmdb.controller;
 
 import java.util.Date;
 import java.util.HashMap;
@@ -13,8 +13,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.dineshonjava.sbmdb.models.Booking;
-import com.dineshonjava.sbmdb.models.BookingRepository;
+import com.hendisantika.sbmdb.models.Booking;
+import com.hendisantika.sbmdb.models.BookingRepository;
 
 /**
  * @author Dinesh.Rajput

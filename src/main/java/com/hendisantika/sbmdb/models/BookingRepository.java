@@ -1,4 +1,4 @@
-package com.dineshonjava.sbmdb.models;
+package com.hendisantika.sbmdb.models;
 
 import org.springframework.data.mongodb.repository.MongoRepository;
 import org.springframework.transaction.annotation.Transactional;
