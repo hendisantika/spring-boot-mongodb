@@ -3,13 +3,13 @@
  */
 package com.hendisantika.sbmdb.models;
 
-import java.util.Date;
-
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
+import java.util.Date;
+
 /**
- * @author Dinesh.Rajput
+ * @author hendisantika
  *
  */
 @Document
