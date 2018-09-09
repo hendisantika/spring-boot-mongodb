@@ -61,6 +61,30 @@ Results :
 
 `http://localhost:8080/booking/read-all`
 
+```
+{
+   "totalBooking":2,
+   "message":"Booking found successfully",
+   "bookings":[
+      {
+         "id":"590bbdd71f2158ec3ba0709a",
+         "psngrName":"Uzumaki",
+         "departure":"Sunagakure",
+         "destination":"Konohagakure",
+         "travelDate":1493941719405
+      },
+      {
+         "id":"590bbf251f2158ec3ba0709b",
+         "psngrName":"Ijem Saritem",
+         "departure":"Hongkong",
+         "destination":"Jakarta",
+         "travelDate":1493942053325
+      }
+   ],
+   "status":"1"
+}
+```
+
 **Deleting a Record:**
 
 ```
