@@ -10,10 +10,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import java.util.Date;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 /**
  * @author hendisantika
@@ -44,12 +41,12 @@ public class BookingController {
 	 */
 	@RequestMapping("/read")
 	public Map<String, Object> read(@RequestParam String bookingId) {
-		Booking booking = bookingRepository.findOne(bookingId);
+		Optional<Booking> booking = bookingRepository.findById(bookingId);
 		Map<String, Object> dataMap = new HashMap<String, Object>();
 		dataMap.put("message", "Booking found successfully");
 		dataMap.put("status", "1");
 		dataMap.put("booking", booking);
-	    return dataMap;
+		return dataMap;
 	}
 	
 	/**
@@ -57,14 +54,15 @@ public class BookingController {
 	 */
 	@RequestMapping("/update")
 	public Map<String, Object> update(@RequestParam String bookingId, @RequestParam String psngrName) {
-		Booking booking = bookingRepository.findOne(bookingId);
+		Optional<Booking> bookingOpt = bookingRepository.findById(bookingId);
+		Booking booking = bookingOpt.get();
 		booking.setPsngrName(psngrName);
 		booking = bookingRepository.save(booking);
 		Map<String, Object> dataMap = new HashMap<String, Object>();
 		dataMap.put("message", "Booking updated successfully");
 		dataMap.put("status", "1");
 		dataMap.put("booking", booking);
-	    return dataMap;
+		return dataMap;
 	}
 	
 	/**
@@ -72,11 +70,11 @@ public class BookingController {
 	 */
 	@RequestMapping("/delete")
 	public Map<String, Object> delete(@RequestParam String bookingId) {
-		bookingRepository.delete(bookingId);
+		bookingRepository.deleteById(bookingId);
 		Map<String, Object> dataMap = new HashMap<String, Object>();
 		dataMap.put("message", "Booking deleted successfully");
 		dataMap.put("status", "1");
-	    return dataMap;
+		return dataMap;
 	}
 	
 	/**
